@@ -41,9 +41,9 @@ connection = ibm_db_dbi.connect()
 sql = "sql query"
 
 df = pd.read_sql(sql, connection)
-df.to_excel('C://Users//pragyaja//Downloads//SSr176'+timestr+'.xlsx')
+df.to_excel('path'+timestr+'.xlsx')
 
-filepath = 'C://Users//pragyaja//Downloads//SSr176'+timestr+'.xlsx'
+filepath = 'path'+timestr+'.xlsx'
 
 fromaddr = ""
 toaddr = "" 
@@ -56,10 +56,10 @@ rcpt = cc.split(",")  + [toaddr]
 msg['From'] = fromaddr
 msg['To'] = toaddr
 msg['Cc'] = cc
-msg['Subject'] = "SSR176_"+timestr
+msg['Subject'] = "filename_"+timestr
 
 
-body = '''  '''
+body = ''' BODY '''
 
 
 
